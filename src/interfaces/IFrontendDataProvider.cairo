@@ -1,6 +1,4 @@
-use opus::periphery::types::{RecoveryModeInfo, ShrineAssetInfo, TroveInfo, YinInfo};
-use starknet::ContractAddress;
-use wadray::Wad;
+use opus::types::{RecoveryModeInfo, ShrineAssetInfo, TroveInfo, YinInfo};
 
 #[starknet::interface]
 pub trait IFrontendDataProvider<TContractState> {
