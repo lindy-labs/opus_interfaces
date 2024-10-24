@@ -19,6 +19,8 @@ pub mod IShrine;
 pub mod ITransmuter;
 
 pub use opus::interfaces::IAbbot::{IAbbotDispatcher, IAbbotDispatcherTrait};
-pub use opus::interfaces::IFrontendDataProvider::{IFrontendDataProviderDispatcher, IFrontendDataProviderDispatcherTrait};
+pub use opus::interfaces::IFrontendDataProvider::{
+    IFrontendDataProviderDispatcher, IFrontendDataProviderDispatcherTrait
+};
 pub use opus::interfaces::IShrine::{IShrineDispatcher, IShrineDispatcherTrait};
 

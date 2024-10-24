@@ -22,13 +22,17 @@ pub trait IShrine<TContractState> {
     fn get_minimum_trove_value(self: @TContractState) -> Wad;
     fn get_debt_ceiling(self: @TContractState) -> Wad;
     fn get_multiplier(self: @TContractState, interval: u64) -> (Ray, Ray);
-    fn get_yang_suspension_status(self: @TContractState, yang: ContractAddress) -> YangSuspensionStatus;
+    fn get_yang_suspension_status(
+        self: @TContractState, yang: ContractAddress
+    ) -> YangSuspensionStatus;
     fn get_yang_threshold(self: @TContractState, yang: ContractAddress) -> Ray;
     fn get_recovery_mode_target_factor(self: @TContractState) -> Ray;
     fn get_recovery_mode_buffer_factor(self: @TContractState) -> Ray;
     fn get_redistributions_count(self: @TContractState) -> u32;
     fn get_trove_redistribution_id(self: @TContractState, trove_id: u64) -> u32;
-    fn get_redistribution_for_yang(self: @TContractState, yang: ContractAddress, redistribution_id: u32) -> Wad;
+    fn get_redistribution_for_yang(
+        self: @TContractState, yang: ContractAddress, redistribution_id: u32
+    ) -> Wad;
     fn is_recovery_mode(self: @TContractState) -> bool;
     fn get_live(self: @TContractState) -> bool;
     // external setters
@@ -56,10 +60,21 @@ pub trait IShrine<TContractState> {
     // external core functions
     fn deposit(ref self: TContractState, yang: ContractAddress, trove_id: u64, amount: Wad);
     fn withdraw(ref self: TContractState, yang: ContractAddress, trove_id: u64, amount: Wad);
-    fn forge(ref self: TContractState, user: ContractAddress, trove_id: u64, amount: Wad, max_forge_fee_pct: Wad);
+    fn forge(
+        ref self: TContractState,
+        user: ContractAddress,
+        trove_id: u64,
+        amount: Wad,
+        max_forge_fee_pct: Wad
+    );
     fn melt(ref self: TContractState, user: ContractAddress, trove_id: u64, amount: Wad);
     fn seize(ref self: TContractState, yang: ContractAddress, trove_id: u64, amount: Wad);
-    fn redistribute(ref self: TContractState, trove_id: u64, debt_to_redistribute: Wad, pct_value_to_redistribute: Ray);
+    fn redistribute(
+        ref self: TContractState,
+        trove_id: u64,
+        debt_to_redistribute: Wad,
+        pct_value_to_redistribute: Ray
+    );
     fn inject(ref self: TContractState, receiver: ContractAddress, amount: Wad);
     fn eject(ref self: TContractState, burner: ContractAddress, amount: Wad);
     // view

@@ -6,7 +6,9 @@ use wadray::{Ray, u128_rdiv, u128_rmul, Wad, WAD_DECIMALS, WAD_SCALE};
 const TWO_POW_128: u256 = 0x100000000000000000000000000000000;
 
 
-pub fn pow<T, impl TMul: Mul<T>, impl TOne: One<T>, impl TDrop: Drop<T>, impl TCopy: Copy<T>>(x: T, mut n: u8) -> T {
+pub fn pow<T, impl TMul: Mul<T>, impl TOne: One<T>, impl TDrop: Drop<T>, impl TCopy: Copy<T>>(
+    x: T, mut n: u8
+) -> T {
     if n == 0 {
         TOne::one()
     } else if n == 1 {
