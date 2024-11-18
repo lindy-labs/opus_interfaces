@@ -19,7 +19,7 @@ pub mod IShrine;
 pub mod ITransmuter;
 
 pub use opus::interfaces::IAbbot::{IAbbotDispatcher, IAbbotDispatcherTrait};
-pub use opus::interfaces::IAbsorber::{IAbbotDispatcher, IAbbotDispatcherTrait};
+pub use opus::interfaces::IAbsorber::{IAbsorberDispatcher, IAbsorberDispatcherTrait};
 pub use opus::interfaces::IAllocator::{IAllocatorDispatcher, IAllocatorDispatcherTrait};
 pub use opus::interfaces::ICaretaker::{ICaretakerDispatcher, ICaretakerDispatcherTrait};
 pub use opus::interfaces::IController::{IControllerDispatcher, IControllerDispatcherTrait};
