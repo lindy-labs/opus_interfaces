@@ -1,7 +1,7 @@
 #[starknet::component]
 pub mod reentrancy_guard_component {
     #[storage]
-    struct Storage {
+    pub struct Storage {
         entered: bool,
     }
 
