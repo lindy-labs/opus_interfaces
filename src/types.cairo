@@ -1,4 +1,4 @@
-use opus::interfaces::IAbsorber::IBlesserDispatcher;
+use opus::interfaces::absorber::IBlesserDispatcher;
 use starknet::ContractAddress;
 use wadray::{Ray, Wad};
 
