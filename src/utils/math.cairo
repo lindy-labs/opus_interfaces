@@ -1,5 +1,5 @@
 use core::num::traits::One;
-use wadray::{Ray, u128_rdiv, u128_rmul, Wad, WAD_DECIMALS, WAD_SCALE};
+use wadray::{Ray, u128_rdiv, u128_rmul, Wad, WAD_DECIMALS};
 
 
 const TWO_POW_128: u256 = 0x100000000000000000000000000000000;
