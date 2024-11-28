@@ -11,5 +11,5 @@ To use this package, add the repository as a dependency in your Scarb.toml:
 
 ```
 [dependencies]
-opus = "{ git = "https://github.com/lindy-labs/opus_interfaces.git", tag = "v0.1.0" }"
+opus = "1.0.0"
 ```

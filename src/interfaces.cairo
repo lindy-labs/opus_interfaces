@@ -3,7 +3,6 @@ pub mod absorber;
 pub mod allocator;
 pub mod caretaker;
 pub mod controller;
-pub mod erc20;
 pub mod equalizer;
 pub mod flash_borrower;
 pub mod flash_mint;
@@ -26,7 +25,6 @@ pub use opus::interfaces::absorber::{
 pub use opus::interfaces::allocator::{IAllocatorDispatcher, IAllocatorDispatcherTrait};
 pub use opus::interfaces::caretaker::{ICaretakerDispatcher, ICaretakerDispatcherTrait};
 pub use opus::interfaces::controller::{IControllerDispatcher, IControllerDispatcherTrait};
-pub use opus::interfaces::erc20::{IERC20, IERC20Dispatcher, IERC20DispatcherTrait};
 pub use opus::interfaces::flash_borrower::{
     IFlashBorrower, IFlashBorrowerDispatcher, IFlashBorrowerDispatcherTrait
 };

@@ -40,11 +40,7 @@ const x9: u128 = 6250000000000000000; // 2ˆ-4
 const a9: u128 = 106449445891785942956; // eˆ(x9)
 
 
-// NOTE: this function currently only handles positive exponents, since it deals in uints.
-// TODO:
-// - once an int type is added, consider handling negative exponents too, although
-//   it may not be necessary for our purposes.
-
+// NOTE: this function only handles positive exponents, since it deals in uints.
 pub fn exp(x: Wad) -> Wad {
     let mut x: u128 = x.into();
 
