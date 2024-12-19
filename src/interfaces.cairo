@@ -25,6 +25,7 @@ pub use opus::interfaces::absorber::{
 pub use opus::interfaces::allocator::{IAllocatorDispatcher, IAllocatorDispatcherTrait};
 pub use opus::interfaces::caretaker::{ICaretakerDispatcher, ICaretakerDispatcherTrait};
 pub use opus::interfaces::controller::{IControllerDispatcher, IControllerDispatcherTrait};
+pub use opus::interfaces::equalizer::{IEqualizerDispatcher, IEqualizerDispatcherTrait};
 pub use opus::interfaces::flash_borrower::{
     IFlashBorrower, IFlashBorrowerDispatcher, IFlashBorrowerDispatcherTrait
 };
