@@ -11,5 +11,5 @@ To use this package, add the repository as a dependency in your Scarb.toml:
 
 ```
 [dependencies]
-opus = "1.0.0"
+opus = "1.0.1"
 ```
