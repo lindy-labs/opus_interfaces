@@ -155,7 +155,7 @@ pub struct QuoteTokenInfo {
 //
 
 pub mod pragma {
-    #[derive(Copy, Drop, Serde)]
+    #[derive(Copy, Drop, PartialEq, Serde)]
     pub enum AggregationMode {
         Median,
         Mean,
@@ -188,4 +188,21 @@ pub mod pragma {
         // price value
         pub sources: u32,
     }
+
+    #[derive(Copy, Drop, PartialEq, Serde)]
+    pub struct PairSettings {
+        pub pair_id: felt252,
+        pub aggregation_mode: AggregationMode,
+    }
+}
+
+//
+// Seer v2
+//
+
+#[derive(Copy, Default, Drop, Debug, PartialEq, Serde)]
+pub enum PriceType {
+    #[default]
+    Direct,
+    Vault
 }
