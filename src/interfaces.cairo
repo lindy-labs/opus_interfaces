@@ -4,6 +4,7 @@ pub mod allocator;
 pub mod caretaker;
 pub mod controller;
 pub mod ekubo;
+pub mod ekubo_oracle_adapter;
 pub mod equalizer;
 pub mod flash_borrower;
 pub mod flash_mint;
@@ -27,6 +28,7 @@ pub use opus::interfaces::allocator::{IAllocatorDispatcher, IAllocatorDispatcher
 pub use opus::interfaces::caretaker::{ICaretakerDispatcher, ICaretakerDispatcherTrait};
 pub use opus::interfaces::controller::{IControllerDispatcher, IControllerDispatcherTrait};
 pub use opus::interfaces::ekubo::{IEkuboDispatcher, IEkuboDispatcherTrait};
+pub use opus::interfaces::ekubo_oracle_adapter::{IEkuboOracleAdapterDispatcher, IEkuboOracleAdapterDispatcherTrait};
 pub use opus::interfaces::equalizer::{IEqualizerDispatcher, IEqualizerDispatcherTrait};
 pub use opus::interfaces::flash_borrower::{
     IFlashBorrower, IFlashBorrowerDispatcher, IFlashBorrowerDispatcherTrait
