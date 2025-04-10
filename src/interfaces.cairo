@@ -17,6 +17,7 @@ pub mod receptor;
 pub mod seer;
 pub mod sentinel;
 pub mod shrine;
+pub mod stabilizer;
 pub mod transmuter;
 
 pub use opus::interfaces::abbot::{IAbbotDispatcher, IAbbotDispatcherTrait};
@@ -51,4 +52,5 @@ pub use opus::interfaces::seer::{
 };
 pub use opus::interfaces::sentinel::{ISentinelDispatcher, ISentinelDispatcherTrait};
 pub use opus::interfaces::shrine::{IShrineDispatcher, IShrineDispatcherTrait};
+pub use opus::interfaces::stabilizer::{IStabilizerDispatcher, IStabilizerDispatcherTrait};
 pub use opus::interfaces::transmuter::{ITransmuterDispatcher, ITransmuterDispatcherTrait};
