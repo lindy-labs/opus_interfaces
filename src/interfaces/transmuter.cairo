@@ -28,6 +28,7 @@ pub trait ITransmuter<TContractState> {
     fn transmute(ref self: TContractState, asset_amt: u128);
     fn reverse(ref self: TContractState, yin_amt: Wad);
     fn sweep(ref self: TContractState, asset_amt: u128);
+    fn withdraw_secondary_asset(ref self: TContractState, asset: ContractAddress, asset_amt: u128);
     // isolated deprecation
     fn settle(ref self: TContractState);
     // global shutdown
