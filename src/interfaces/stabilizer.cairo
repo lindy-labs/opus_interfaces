@@ -13,7 +13,8 @@ pub trait IStabilizer<TContractState> {
     //
     // If you need to make use of these two functions, create a separate interface and add
     // this line to your Scarb.toml
-    // `ekubo = { git = "https://github.com/EkuboProtocol/abis", commit = "edb6de8c9baf515f1053bbab3d86825d54a63bc3" }`
+    // `ekubo = { git = "https://github.com/EkuboProtocol/abis", commit =
+    // "edb6de8c9baf515f1053bbab3d86825d54a63bc3" }`
 
     // fn get_pool_key(self: @TContractState) -> PoolKey;
     // fn get_bounds(self: @TContractState) -> Bounds;
