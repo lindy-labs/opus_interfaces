@@ -2,15 +2,9 @@
 version = 1
 
 [[package]]
-name = "ekubo"
-version = "0.1.0"
-source = "git+https://github.com/EkuboProtocol/abis#edb6de8c9baf515f1053bbab3d86825d54a63bc3"
-
-[[package]]
 name = "opus"
 version = "1.2.0"
 dependencies = [
- "ekubo",
  "wadray",
 ]
 
