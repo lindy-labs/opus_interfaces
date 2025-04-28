@@ -7,7 +7,7 @@ use wadray::{Ray, Wad};
 pub enum YangSuspensionStatus {
     None,
     Temporary,
-    Permanent
+    Permanent,
 }
 
 #[derive(Copy, Drop, Serde)]
@@ -37,20 +37,20 @@ pub impl HealthImpl of HealthTrait {
 #[derive(Copy, Drop, Serde)]
 pub struct YangBalance {
     pub yang_id: u32, //  ID of yang in Shrine
-    pub amount: Wad, // Amount of yang in Wad
+    pub amount: Wad // Amount of yang in Wad
 }
 
 #[derive(Copy, Drop, PartialEq, Serde)]
 pub struct AssetBalance {
     pub address: ContractAddress, // Address of the ERC-20 asset
-    pub amount: u128, // Amount of the asset in the asset's decimals
+    pub amount: u128 // Amount of the asset in the asset's decimals
 }
 
 #[derive(Copy, Drop, PartialEq, Serde)]
 pub struct Trove {
     pub charge_from: u64, // Time ID (timestamp // TIME_ID_INTERVAL) for start of next accumulated interest calculation
     pub last_rate_era: u64,
-    pub debt: Wad, // Normalized debt
+    pub debt: Wad // Normalized debt
 }
 
 //
@@ -76,20 +76,20 @@ pub struct DistributionInfo {
 pub struct Reward {
     pub asset: ContractAddress, // ERC20 address of token
     pub blesser: IBlesserDispatcher, // Address of contract implementing `IBlesser` for distributing the token to the absorber
-    pub is_active: bool, // Whether the blesser (vesting contract) should be called
+    pub is_active: bool // Whether the blesser (vesting contract) should be called
 }
 
 #[derive(Copy, Drop, PartialEq, Serde)]
 pub struct Provision {
     pub epoch: u32, // Epoch in which shares are issued
-    pub shares: Wad, // Amount of shares for provider in the above epoch
+    pub shares: Wad // Amount of shares for provider in the above epoch
 }
 
 #[derive(Copy, Drop, PartialEq, Serde)]
 pub struct Request {
     pub timestamp: u64, // Timestamp of request
     pub timelock: u64, // Amount of time that needs to elapse after the timestamp before removal
-    pub is_valid: bool, // Whether the request is still valid i.e. provider has not called `remove` or `provide`
+    pub is_valid: bool // Whether the request is still valid i.e. provider has not called `remove` or `provide`
 }
 
 //
@@ -100,14 +100,14 @@ pub struct Request {
 pub struct YinInfo {
     pub spot_price: Wad, // Spot price of yin
     pub total_supply: Wad, // Total supply of yin
-    pub ceiling: Wad, // Maximum amount of yin allowed
+    pub ceiling: Wad // Maximum amount of yin allowed
 }
 
 #[derive(Copy, Drop, Serde)]
 pub struct RecoveryModeInfo {
     pub is_recovery_mode: bool,
     pub target_ltv: Ray, // Recovery mode is triggered once Shrine's LTV exceeds this
-    pub buffer_ltv: Ray, // Thresholds are scaled once Shrine's LTV exceeds this
+    pub buffer_ltv: Ray // Thresholds are scaled once Shrine's LTV exceeds this
 }
 
 #[derive(Copy, Drop, Serde)]
@@ -125,7 +125,7 @@ pub struct TroveInfo {
 pub struct TroveAssetInfo {
     pub shrine_asset_info: ShrineAssetInfo,
     pub amount: u128, // Amount of the yang's asset in the asset's decimals for the trove
-    pub value: Wad, // Value of the yang in the trove
+    pub value: Wad // Value of the yang in the trove
 }
 
 #[derive(Copy, Drop, Serde)]
@@ -159,7 +159,7 @@ pub mod pragma {
     pub enum AggregationMode {
         Median,
         Mean,
-        Error
+        Error,
     }
 
     #[derive(Copy, Drop, Serde)]
@@ -204,7 +204,7 @@ pub mod pragma {
 pub enum PriceType {
     #[default]
     Direct,
-    Vault
+    Vault,
 }
 
 //
